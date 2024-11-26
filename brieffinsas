@@ -23,7 +23,7 @@ typedef struct{
 
      void ajouter(){
     printf("entre un titre:");
-    scanf("%s",ts[Taille].titre);
+    scanf("%s",ts[TaiOBlle].titre);
     printf("donner une description:");
     scanf("%s",ts[Taille].description);
     int choix;
@@ -73,6 +73,21 @@ do{
 }while (ts[Taille].date.annee<2024);
     Taille++;
 }
+void afficher()
+{
+    if(Taille==0){
+        printf("aucun taches disponibles!!")
+    }
+    int i;
+    for(i=0;i<Taille;i++){
+    printf("le titre est :%s\n",ts[i].titre);
+    printf("la description est :%s\n",ts[i].description);
+    printf("la priorite est :%s\n",ts[i].priorite);
+    printf("le jour est :%d\n",ts[i].date.jour);
+    printf("le mois est :%d\n",ts[i].date.mois);
+    printf("l'annee est :%d\n",ts[i].date.annee);
+    }
+}
 void menu(){
     printf("\n Menu\n");
     printf("1.ajouter\n");
@@ -96,6 +111,9 @@ int main()
         ajouter();
         break;
         case 2:
+	afficher;
+	break;
+	case 3:
         printf(" au revoir !\n");
         break;
         default:
@@ -105,6 +123,6 @@ int main()
     else{
             printf("vous devez choisissez ajoutre avant de acceder un autre choix");
         }
-   } while(p != 3);
-    return 0;
+   } while(p != 4);
+      return 0;
 }
