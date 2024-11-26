@@ -1,0 +1,1 @@
+:l'application conçue en C permet aux membres de l'association OneHand de gérer leur taches (Ajouter, modification, affichage, suppression, filtrer ) avec des détails comme le titre, la description, la date d'échéance et la priorité
